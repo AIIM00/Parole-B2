@@ -1,0 +1,3 @@
+import {topics, getTopic, deck, weekly, diagnostic} from './content.js';
+const KEY='parole-b2-v1';
+const DEFAULT={version:1,preferences:{rate:0.96,autoSpeak:true},reviews:{},sessio
