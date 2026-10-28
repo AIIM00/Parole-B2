@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: parole-b2-francais
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: unzip -o Parole-B2-Render-Ready.zip && cd parole-b2 && npm run check
+    startCommand: cd parole-b2 && npm start
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: APP_ACCESS_CODE
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
