@@ -1,0 +1,2 @@
+import {topics, getTopic, deck, weekly, diagnostic} from './content.js';
+const KEY='parole-b2-v1';
