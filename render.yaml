@@ -1,11 +1,11 @@
+# Optional Render Blueprint. You can also deploy via the Render Web Service UI.
 services:
   - type: web
-    name: parole-b2-francais
+    name: parole-b2
     runtime: node
     plan: free
-    region: frankfurt
-    buildCommand: unzip -o Parole-B2-Render-Ready.zip && cd parole-b2 && npm run check
-    startCommand: cd parole-b2 && npm start
+    buildCommand: npm run check
+    startCommand: npm start
     autoDeployTrigger: commit
     envVars:
       - key: NODE_ENV
